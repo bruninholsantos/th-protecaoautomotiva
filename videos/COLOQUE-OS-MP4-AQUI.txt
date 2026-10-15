@@ -1,0 +1,3 @@
+Coloque aqui os vídeos em MP4 e preencha o campo mp4 de cada vídeo em index.html
+(procure por 'CONFIGURAÇÃO DOS VÍDEOS'), por exemplo: mp4: "videos/16-anos.mp4".
+Sem MP4, o site usa o player do Instagram.

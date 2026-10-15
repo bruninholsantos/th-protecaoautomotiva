@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TH Proteção Automotiva</title>
+<meta name="description" content="TH Proteção Automotiva — películas de alta performance, antivandalismo e iluminação ambiente LED Premium. Zona Leste, São Paulo. Desde 2014.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600;1,9..144,700&family=Michroma&family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: estúdio escuro — faixas de largura total, conteúdo em trilho de 1240px, fotos verticais dos reels como protagonistas */
+:root{
+  color-scheme: dark;
+  --ink:#070707;          /* fundo do estúdio */
+  --ink-2:#0C0C0C;        /* faixas alternadas */
+  --panel:#111111;        /* cartões */
+  --line:rgba(255,255,255,.10);
+  --line-gold:rgba(226,194,122,.30);
+  --fg:#EEEEF0;           /* texto principal */
+  --fg-2:#B4B4BA;         /* texto de apoio */
+  --fg-3:#8C8C93;         /* legendas */
+  --gold:#E2C27A;         /* ouro do logo */
+  --gold-hi:#F6DFA4;
+  --gold-lo:#9A6A25;
+  --on-gold:#140D02;
+  --f-display:"Poppins", "Helvetica Neue", Arial, sans-serif;
+  --f-accent:"Fraunces", Georgia, "Times New Roman", serif;
+  --f-label:"Michroma", "Arial Black", sans-serif;
+  --f-body:"Poppins", "Helvetica Neue", Arial, sans-serif;
+  --rail:1240px;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--gold)}
+a:hover{color:var(--gold-hi)}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:4px}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+.rail{max-width:var(--rail);margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+@media(min-width:700px){:root{--gut-l:max(40px, env(safe-area-inset-left, 0px));--gut-r:max(40px, env(safe-area-inset-right, 0px))}}
+.band{padding-block:clamp(72px,9vw,128px)}
+.band.alt{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+
+/* tipografia */
+.eyebrow{font-family:var(--f-label);font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.h2{font-family:var(--f-display);font-weight:600;font-size:clamp(34px,4.6vw,62px);line-height:1.02;letter-spacing:-.03em}
+.serif{font-family:var(--f-accent);font-style:italic;font-weight:700;letter-spacing:-.015em}
+.gold-text{background:linear-gradient(100deg,var(--gold-lo) 0%,#E9C877 30%,#FFF1C4 48%,#C8963E 66%,var(--gold-lo) 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.lead{font-size:clamp(16px,1.3vw,18px);line-height:1.75;color:var(--fg-2);font-weight:300;max-width:60ch}
+.muted{color:var(--fg-2)}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,4vw,56px)}
+.head-row .lead{max-width:40ch;font-size:15px}
+.stack{display:flex;flex-direction:column;gap:18px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--f-body);font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:0;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(120deg,#F1D58E,#C8963E);color:var(--on-gold)}
+.btn-gold:hover{color:var(--on-gold);box-shadow:0 12px 40px -10px rgba(226,194,122,.6)}
+.btn-ghost{background:transparent;color:var(--fg);border:1px solid rgba(255,255,255,.24);font-weight:500}
+.btn-ghost:hover{color:var(--fg);background:rgba(255,255,255,.06)}
+.btn svg{flex:none}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(7,7,7,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,194,122,.14)}
+.nav .rail{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-word{display:flex;flex-direction:column;line-height:1}
+.brand-word b{font-family:var(--f-label);font-weight:400;font-size:18px;letter-spacing:.14em;color:var(--fg)}
+.brand-word small{font-family:var(--f-label);font-size:7.5px;letter-spacing:.3em;color:var(--gold);margin-top:6px}
+.nav-links{display:flex;gap:28px;font-size:14px}
+.nav-links a{color:#CFCFD4;text-decoration:none}
+.nav-links a:hover{color:var(--gold-hi)}
+.nav .btn{min-height:44px;padding:0 18px;font-size:14px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--fg);align-items:center;justify-content:center;cursor:pointer}
+.mobile-menu{border-top:1px solid var(--line)}
+.mobile-menu nav{display:flex;flex-direction:column;padding-block:8px 18px}
+.mobile-menu a{padding:14px 0;color:var(--fg);text-decoration:none;font-size:17px;border-bottom:1px solid var(--line)}
+@media(max-width:920px){.nav-links{display:none}.menu-btn{display:inline-flex}}
+@media(max-width:480px){.nav .btn span{display:none}.nav .btn{width:44px;padding:0}}
+
+/* HERO */
+.hero{position:relative;padding-block:clamp(48px,7vw,104px) clamp(56px,7vw,96px);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(36px,5vw,72px);align-items:center}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--line-gold);border-radius:999px;font-family:var(--f-label);font-size:10px;letter-spacing:.2em;color:var(--gold)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(226,194,122,.5)}50%{box-shadow:0 0 0 9px rgba(226,194,122,0)}}
+.h1{font-family:var(--f-display);font-weight:600;font-size:clamp(42px,6.3vw,88px);line-height:.98;letter-spacing:-.04em}
+.hero-copy{display:flex;flex-direction:column;gap:26px}
+.hero-copy > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy > *:nth-child(2){animation-delay:.08s}.hero-copy > *:nth-child(3){animation-delay:.16s}.hero-copy > *:nth-child(4){animation-delay:.24s}.hero-copy > *:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:.001;transform:translateY(26px)}to{opacity:1;transform:none}}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);margin-top:8px}
+.stat{padding:18px 14px 0;display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(255,255,255,.08)}
+.stat:first-child{padding-left:0;border-left:0}
+.stat strong{font-size:clamp(26px,2.6vw,34px);font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--fg)}
+.stat span{font-size:12px;line-height:1.4;color:var(--fg-3)}
+.hero-visual{position:relative;min-height:600px}
+.shot{position:absolute;border-radius:6px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.95);aspect-ratio:489/870;max-width:100%}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot-a{left:0;top:0;width:63%;border:1px solid var(--line-gold)}
+.shot-b{right:0;bottom:0;width:46%;border:1px solid rgba(255,255,255,.18);animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+.shot-cap{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.88))}
+.shot-cap small{font-family:var(--f-label);font-size:9px;letter-spacing:.24em;color:var(--gold)}
+.shot-cap b{display:block;font-size:16px;font-weight:600;margin-top:6px}
+.shot-cap span{display:block;font-size:12px;color:#C4C4C9}
+.sweep::after{content:"";position:absolute;top:-20%;bottom:-20%;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,240,200,.22),transparent);transform:skewX(-18deg);animation:sweep 6.5s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%{left:-60%}55%,100%{left:130%}}
+.badge{position:absolute;left:52%;top:16%;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:rgba(12,12,12,.85);backdrop-filter:blur(10px);border:1px solid var(--line-gold);font-size:12px;line-height:1.35}
+.badge b{color:var(--fg)}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-visual{min-height:0;aspect-ratio:1/1.05;max-width:520px;width:100%;margin:0 auto}
+}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.stat:nth-child(3){padding-left:0;border-left:0}}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;background:var(--ink-2);border-block:1px solid rgba(226,194,122,.18);padding-block:20px}
+.marquee{display:flex;width:max-content;animation:marq 40s linear infinite}
+.marquee:hover{animation-play-state:paused}
+.marquee ul{display:flex;align-items:center;gap:44px;padding:0 44px 0 0;margin:0;list-style:none;font-family:var(--f-label);font-size:clamp(13px,1.5vw,19px);letter-spacing:.14em;color:#D9D9DE;white-space:nowrap}
+.marquee li.sep{color:#C8963E;font-size:.7em}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* HISTÓRIA */
+.story{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(40px,6vw,96px);align-items:start}
+.portrait{position:sticky;top:110px;border-radius:6px;overflow:hidden;border:1px solid var(--line-gold);aspect-ratio:489/690;max-width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.portrait figcaption b{display:block;font-size:18px}
+.portrait figcaption span{font-size:13px;color:#C9C9CE}
+.timeline{position:relative;display:flex;flex-direction:column;gap:38px;padding-left:38px;margin:44px 0 48px;list-style:none}
+.timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),rgba(226,194,122,.04))}
+.timeline li{position:relative;display:flex;flex-direction:column;gap:6px}
+.timeline li::before{content:"";position:absolute;left:-38px;top:6px;width:13px;height:13px;border:2px solid var(--gold);background:var(--ink);transform:rotate(45deg)}
+.timeline li.now::before{background:var(--gold);box-shadow:0 0 18px rgba(226,194,122,.8)}
+.timeline time{font-family:var(--f-label);font-size:12px;letter-spacing:.14em;color:var(--gold)}
+.timeline h3{font-size:21px;font-weight:600}
+.timeline p{font-size:15px;line-height:1.7;color:var(--fg-2);max-width:56ch}
+.quote{margin:0;padding:28px 30px;border:1px solid var(--line-gold);border-radius:6px;background:linear-gradient(140deg,rgba(226,194,122,.08),rgba(226,194,122,0) 60%)}
+.quote p{font-family:var(--f-accent);font-style:italic;font-weight:600;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#F1E3BF}
+.quote footer{margin-top:12px;font-size:13px;color:var(--fg-3)}
+@media(max-width:900px){.story{grid-template-columns:minmax(0,1fr)}.portrait{position:relative;top:0;max-width:440px}}
+
+/* SERVIÇOS */
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:border-color .4s}
+.svc:hover{border-color:rgba(226,194,122,.5)}
+.svc-img{height:250px;overflow:hidden}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.svc:hover .svc-img img{transform:scale(1.06)}
+.svc-body{padding:28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.svc h3{font-size:22px;font-weight:600}
+.svc p{font-size:15px;line-height:1.7;color:var(--fg-2)}
+.ticks{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#D2D2D6}
+.ticks li{display:flex;gap:12px;align-items:center}
+.ticks li::before{content:"";flex:none;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.svc .tag{font-family:var(--f-label);font-size:9px;letter-spacing:.22em;color:var(--gold)}
+@media(max-width:960px){.services{grid-template-columns:minmax(0,1fr)}.svc{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.svc-img{height:100%;min-height:260px}}
+@media(max-width:620px){.svc{display:flex}.svc-img{height:230px;min-height:0}}
+
+/* VÍDEOS */
+.videos{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:24px;align-items:stretch}
+.player{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line-gold);background:#000;min-height:560px}
+.player .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(24px) brightness(.4);transform:scale(1.15)}
+.player .fg{position:absolute;left:50%;top:0;height:100%;width:auto;max-width:100%;transform:translateX(-50%);object-fit:contain}
+.player .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(0,0,0,.9))}
+.player .meta{position:absolute;left:0;right:0;bottom:0;padding:26px;display:flex;flex-direction:column;gap:8px}
+.player .meta h3{font-size:clamp(22px,2.4vw,30px);font-weight:600}
+.player .meta p{font-size:14px;line-height:1.6;color:#CFCFD4;max-width:52ch}
+.play{position:absolute;left:50%;top:46%;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;background:linear-gradient(120deg,#F1D58E,#C8963E);color:var(--on-gold);display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;animation:pulse 2.4s ease-in-out infinite;transition:transform .25s}
+.play:hover{transform:scale(1.07);color:var(--on-gold)}
+.player iframe,.player video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.player .ext{position:absolute;top:16px;right:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border-radius:999px;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:var(--fg);font-size:13px;text-decoration:none}
+.vlist{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.vitem{width:100%;display:flex;align-items:center;gap:16px;padding:10px;border-radius:8px;background:var(--panel);border:1px solid var(--line);color:var(--fg);font-family:var(--f-body);text-align:left;cursor:pointer;transition:border-color .3s,background .3s}
+.vitem:hover{border-color:rgba(226,194,122,.45)}
+.vitem[aria-pressed="true"]{border-color:var(--gold);background:linear-gradient(140deg,rgba(226,194,122,.14),rgba(226,194,122,.02))}
+.vthumb{position:relative;flex:none;width:64px;height:86px;border-radius:6px;overflow:hidden;background:#000}
+.vthumb img{width:100%;height:100%;object-fit:cover}
+.vthumb::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.vtext{display:flex;flex-direction:column;gap:4px;min-width:0}
+.vtext small{font-family:var(--f-label);font-size:9px;letter-spacing:.2em;color:var(--gold)}
+.vtext b{font-size:15px;font-weight:600;line-height:1.3}
+.vtext span{font-size:12px;color:var(--fg-3)}
+@media(max-width:900px){.videos{grid-template-columns:minmax(0,1fr)}.player{min-height:0;aspect-ratio:9/14;max-width:520px;width:100%;margin:0 auto}.vlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.vlist{grid-template-columns:minmax(0,1fr)}}
+
+/* PROCESSO */
+.process-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center;margin-bottom:56px}
+.process-img{border-radius:8px;overflow:hidden;border:1px solid var(--line-gold);aspect-ratio:695/600;max-width:100%}
+.process-img img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--ink-2);padding:32px 26px;display:flex;flex-direction:column;gap:12px;counter-increment:s}
+.steps li::before{content:"0" counter(s);font-family:var(--f-accent);font-style:italic;font-weight:700;font-size:54px;line-height:1;background:linear-gradient(100deg,var(--gold-lo),#F1D58E,#C8963E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.steps h3{font-size:19px;font-weight:600}
+.steps p{font-size:14px;line-height:1.7;color:var(--fg-2)}
+@media(max-width:960px){.process-top{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* LED */
+.led{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;border:0}
+.swatch{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border-radius:999px;background:rgba(10,10,10,.7);border:1px solid rgba(255,255,255,.22);color:var(--fg);font:500 14px var(--f-body);cursor:pointer;transition:all .3s}
+.swatch i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
+.swatch[aria-pressed="true"]{border-color:var(--c);background:#161616;box-shadow:0 0 22px -4px var(--c)}
+.range{display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--fg-2);margin-top:6px}
+.range span{display:flex;justify-content:space-between}
+.range output{color:var(--fg);font-variant-numeric:tabular-nums}
+.range input{width:100%;accent-color:var(--gold);height:28px}
+.led-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.led-shots figure{margin:0;border-radius:8px;overflow:hidden;aspect-ratio:489/870;max-width:100%;border:1px solid rgba(255,255,255,.14);box-shadow:var(--glow-shadow,0 30px 80px -20px #9B5CFF);transition:box-shadow .6s}
+.led-shots figure:nth-child(2){margin-top:56px}
+.led-shots img{width:100%;height:100%;object-fit:cover;filter:var(--led-filter,none);transition:filter .6s}
+@media(max-width:900px){.led{grid-template-columns:minmax(0,1fr)}}
+
+/* PROJETOS */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,.22);color:var(--fg);font:500 14px var(--f-body);cursor:pointer;transition:all .25s}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:0;padding:0;list-style:none}
+.proj{position:relative;display:block;width:100%;padding:0;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:489/700;cursor:zoom-in;color:var(--fg);text-align:left;font-family:var(--f-body);transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.proj:hover{transform:translateY(-6px);border-color:rgba(226,194,122,.55)}
+.proj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.proj:hover img{transform:scale(1.06)}
+.proj .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.92))}
+.proj .tag{position:absolute;top:14px;left:14px;font-family:var(--f-label);font-size:9px;letter-spacing:.2em;padding:7px 10px;background:rgba(7,7,7,.72);border:1px solid var(--line-gold);border-radius:4px;color:var(--gold)}
+.proj .info{position:absolute;left:0;right:0;bottom:0;padding:22px;display:flex;flex-direction:column;gap:4px}
+.proj .info small{font-size:12px;color:#BDBDC2}
+.proj .info b{font-size:20px;font-weight:600}
+.proj .info span{font-size:13px;color:#D9C38E}
+.proj .info i{display:block;height:1px;margin-top:10px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .6s}
+.proj:hover .info i{transform:scaleX(1)}
+.gallery li[hidden]{display:none!important}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.gallery{grid-template-columns:minmax(0,1fr)}}
+.center{display:flex;justify-content:center;margin-top:40px}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) var(--gut-r) calc(24px + env(safe-area-inset-bottom,0px)) var(--gut-l)}
+.lightbox figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;max-height:100%}
+.lightbox img{max-height:calc(100vh - 160px);width:auto;border-radius:6px;border:1px solid var(--line-gold)}
+.lightbox figcaption{text-align:center;font-size:14px;color:var(--fg-2)}
+.lightbox figcaption b{display:block;color:var(--fg);font-size:18px}
+.lb-close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:calc(16px + env(safe-area-inset-right,0px));width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:var(--fg);cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* AVALIAÇÕES */
+.proof{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding:clamp(28px,4vw,48px);border-radius:10px;border:1px solid var(--line-gold);background:linear-gradient(120deg,rgba(226,194,122,.1),rgba(226,194,122,0) 55%)}
+.stars{display:flex;gap:4px;color:var(--gold)}
+.proof strong{display:block;font-size:clamp(24px,2.8vw,36px);font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-top:10px}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,80px);align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);transition:transform .3s;margin-top:-6px}
+.faq details[open] summary::after{transform:rotate(225deg);margin-top:6px}
+.faq details p{padding-bottom:22px;font-size:15px;line-height:1.75;color:var(--fg-2);max-width:62ch}
+@media(max-width:900px){.faq{grid-template-columns:minmax(0,1fr)}}
+
+/* CONTATO */
+.final{position:relative;overflow:hidden;padding-block:clamp(90px,11vw,160px);border-top:1px solid rgba(226,194,122,.18)}
+.final > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;opacity:.3}
+.final::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(7,7,7,.5),var(--ink) 78%)}
+.final .rail{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px}
+.final h2{font-size:clamp(36px,5.2vw,72px);line-height:1;font-weight:600;letter-spacing:-.035em;max-width:18ch}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%;max-width:880px;margin-top:10px}
+.ccard{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:8px;background:rgba(14,14,14,.82);border:1px solid var(--line);text-align:left;text-decoration:none;color:var(--fg)}
+.ccard-link{transition:border-color .3s,transform .3s}
+.ccard-link:hover{border-color:var(--line-gold);transform:translateY(-3px);color:var(--fg)}
+.clogo{flex:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ctext{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ctext small{font-family:var(--f-label);font-size:9px;letter-spacing:.2em;color:var(--gold)}
+.ctext b{font-size:15px;font-weight:600;color:var(--fg);overflow-wrap:anywhere}
+.ctext span{font-size:13px;color:var(--fg-3)}
+@media(max-width:760px){.contact-cards{grid-template-columns:minmax(0,1fr)}}
+
+footer.site{border-top:1px solid var(--line);padding-block:32px}
+footer.site .rail{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;font-size:13px;color:var(--fg-3)}
+
+/* WhatsApp flutuante */
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;background:linear-gradient(120deg,#F1D58E,#C8963E);color:var(--on-gold);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px -10px rgba(0,0,0,.8);text-decoration:none;transition:transform .25s}
+.fab:hover{transform:scale(1.07);color:var(--on-gold)}
+
+/* revelação ao rolar (só onde o navegador suporta; sem suporte, tudo já aparece) */
+@supports (animation-timeline: view()){
+  .reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 24%}
+  .zoom-in{animation:zoomin linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+  .parallax img{animation:para linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+  .progress{animation:prog linear both;animation-timeline:scroll(root)}
+}
+@keyframes reveal{from{opacity:.001;transform:translateY(44px)}to{opacity:1;transform:none}}
+@keyframes zoomin{from{transform:scale(.9);clip-path:inset(10% 8% 10% 8% round 18px)}to{transform:none;clip-path:inset(0 0 0 0 round 6px)}}
+@keyframes para{from{transform:translateY(-5%) scale(1.12)}to{transform:translateY(5%) scale(1.12)}}
+@keyframes prog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:90;background:linear-gradient(90deg,var(--gold-lo),#E9C877,#C8963E);transform-origin:left;transform:scaleX(0)}
+@supports not (animation-timeline: view()){.progress{display:none}}
+.hexline{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 5.5s ease-in-out infinite}
+.hexline.d2{animation-delay:1.3s}.hexline.d3{animation-delay:2.6s}.hexline.d4{animation-delay:3.8s}
+@keyframes draw{0%{stroke-dashoffset:420;opacity:0}15%{opacity:1}50%{stroke-dashoffset:0;opacity:1}85%{opacity:.15}100%{stroke-dashoffset:0;opacity:0}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+
+<div class="progress" aria-hidden="true"></div>
+
+<!-- logo reutilizável -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="thGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6DFA4"/><stop offset=".45" stop-color="#C8963E"/><stop offset="1" stop-color="#7A4E18"/></linearGradient>
+    <symbol id="thMark" viewBox="0 0 100 100"><path d="M50 5 L89 27.5 L89 72.5 L50 95 L11 72.5 L11 27.5 Z" fill="none" stroke="url(#thGold)" stroke-width="7"/><path d="M28 32 H62 M45 32 V72 M56 44 V78 M72 30 V70 M56 56 H72" fill="none" stroke="url(#thGold)" stroke-width="7"/></symbol>
+    <symbol id="icWa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2a9.8 9.8 0 0 0-8.5 14.7L2.2 21.8l5-1.3A9.8 9.8 0 1 0 12 2.2zm0 1.8a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4z"/><path fill="currentColor" d="M8.6 7.2c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 5 4.3 2.4.9 2.9.7 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.6.3-.5v-.5l-.9-2.2c-.2-.5-.4-.5-.6-.5h-.6z"/></symbol>
+    <symbol id="icIg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="icStar" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="currentColor"/></symbol>
+    <symbol id="icArrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icPlay" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+    <symbol id="icPin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icExt" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="rail">
+    <a class="brand" href="#topo" aria-label="TH Proteção Automotiva, início">
+      <svg width="40" height="40" aria-hidden="true"><use href="#thMark"/></svg>
+      <span class="brand-word"><b>TH</b><small>PROTEÇÃO AUTOMOTIVA</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#historia">História</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#processo">Processo</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn btn-gold" href="https://wa.me/message/52O4XRXVXSV6I1" aria-label="Pedir orçamento pelo WhatsApp"><svg width="18" height="18" aria-hidden="true"><use href="#icWa"/></svg><span>Orçamento</span></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="rail">
+      <nav aria-label="Seções (menu)">
+        <a href="#historia">História</a><a href="#servicos">Serviços</a><a href="#videos">Vídeos</a><a href="#processo">Processo</a><a href="#projetos">Projetos</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-bg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <path id="hx" d="M0 -60 L52 -30 L52 30 L0 60 L-52 30 L-52 -30 Z"/>
+      <radialGradient id="heroGlow" cx=".72" cy=".42" r=".55"><stop offset="0" stop-color="#C8963E" stop-opacity=".22"/><stop offset="1" stop-color="#070707" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1440" height="820" fill="url(#heroGlow)"/>
+    <g fill="none" stroke="rgba(226,194,122,.09)" stroke-width="1.2" id="honey"></g>
+    <g fill="none" stroke="#F6E6BC" stroke-width="2.2" style="filter:drop-shadow(0 0 6px rgba(255,236,190,.9))">
+      <use class="hexline" href="#hx" x="1036" y="230"/><use class="hexline d2" href="#hx" x="1192" y="320"/><use class="hexline d3" href="#hx" x="984" y="410"/><use class="hexline d4" href="#hx" x="1296" y="140"/>
+    </g>
+  </svg>
+  <div class="rail hero-grid">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot"></span>PELÍCULAS · ANTIVANDALISMO · LED PREMIUM</span>
+      <h1 class="h1">Elevando o padrão<br><span class="serif gold-text">desde 2014.</span></h1>
+      <p class="lead">Estúdio de proteção automotiva na Zona Leste de São Paulo. Películas de alta performance, antivandalismo e iluminação ambiente LED Premium. Cada projeto começa entendendo o seu carro e termina com uma revisão final à altura dele.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/message/52O4XRXVXSV6I1">Enviar o modelo do meu carro <svg width="18" height="18" aria-hidden="true"><use href="#icArrow"/></svg></a>
+        <a class="btn btn-ghost" href="#projetos">Ver projetos</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>16</strong><span>anos de profissão</span></div>
+        <div class="stat"><strong>12</strong><span>anos de TH</span></div>
+        <div class="stat"><strong>150+</strong><span>avaliações no Google</span></div>
+        <div class="stat"><strong>6 mil</strong><span>seguidores no Instagram</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <figure class="shot shot-a sweep" style="margin:0">
+        <img src="img/g63.jpg" alt="Mercedes-AMG G63 cinza fosco com película premium aplicada pela TH" width="489" height="870">
+        <figcaption class="shot-cap"><small>PROJETO</small><b>Mercedes-AMG G63</b><span>Película premium · Kit Confort PLUS</span></figcaption>
+      </figure>
+      <figure class="shot shot-b" style="margin:0">
+        <img src="img/p911-shark.jpg" alt="Porsche 911 Carrera S azul com película premium" width="489" height="870">
+      </figure>
+      <div class="badge"><svg width="18" height="18" style="color:var(--gold)" aria-hidden="true"><use href="#icStar"/></svg><span><b>+150 avaliações</b><br><span class="muted">no Google</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARROS -->
+<div class="marquee-wrap" aria-label="Alguns veículos já atendidos pela TH">
+  <div class="marquee">
+    <ul><li>MERCEDES-AMG G63</li><li class="sep">◆</li><li>PORSCHE 911 CARRERA S</li><li class="sep">◆</li><li>JAGUAR F-TYPE</li><li class="sep">◆</li><li>VW NIVUS</li><li class="sep">◆</li><li>HYUNDAI CRETA</li><li class="sep">◆</li></ul>
+    <ul aria-hidden="true"><li>MERCEDES-AMG G63</li><li class="sep">◆</li><li>PORSCHE 911 CARRERA S</li><li class="sep">◆</li><li>JAGUAR F-TYPE</li><li class="sep">◆</li><li>VW NIVUS</li><li class="sep">◆</li><li>HYUNDAI CRETA</li><li class="sep">◆</li></ul>
+  </div>
+</div>
+
+<!-- HISTÓRIA -->
+<section class="band" id="historia">
+  <div class="rail story">
+    <figure class="portrait zoom-in parallax" style="margin:0">
+      <img src="img/thiago.jpg" alt="Thiago de Jesus no estúdio da TH, com o teto de LED ao fundo" width="489" height="870">
+      <figcaption><b>Thiago de Jesus</b><span>À frente da TH · @thiagodath_</span></figcaption>
+    </figure>
+    <div>
+      <div class="stack reveal">
+        <span class="eyebrow">Nossa história</span>
+        <h2 class="h2">Construída <span class="serif gold-text">projeto por projeto.</span></h2>
+        <p class="lead">Técnica, evolução e responsabilidade. A TH nasceu do ofício de quem aplica película há mais de uma década e meia, e cresceu atendendo carros que não aceitam nada menos que precisão.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><time>HÁ 16 ANOS</time><h3>O começo no ofício</h3><p>Os primeiros anos aplicando películas formam a base de tudo: olho treinado para o acabamento e cuidado com cada vidro.</p></li>
+        <li class="reveal"><time datetime="2014">2014</time><h3>Nasce a TH</h3><p>A marca ganha nome próprio na Zona Leste de São Paulo, com um compromisso que vira assinatura: elevar o padrão.</p></li>
+        <li class="reveal"><time>ALTO PADRÃO</time><h3>G63, 911, F-Type</h3><p>Esportivos e importados entram na rotina do estúdio, cada um com um projeto pensado para preservar a identidade do carro.</p></li>
+        <li class="reveal now"><time datetime="2026">2026 · NOVA FASE</time><h3>Uma nova forma de entregar proteção</h3><p>Películas, iluminação ambiente em LED e um processo mostrado de perto, projeto a projeto, no Instagram da TH.</p></li>
+      </ol>
+      <blockquote class="quote reveal">
+        <p>“O padrão do veículo exige o mesmo nível de cuidado na execução.”</p>
+        <footer>TH Proteção Automotiva</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="band alt" id="servicos">
+  <div class="rail">
+    <div class="head-row reveal">
+      <div class="stack" style="max-width:680px">
+        <span class="eyebrow">Serviços</span>
+        <h2 class="h2">Proteção, conforto e <span class="serif gold-text">atmosfera.</span></h2>
+      </div>
+      <p class="lead">Uma boa película vai além da aparência. Acabamento, durabilidade e conforto térmico também fazem parte da escolha.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/jaguar.jpg" alt="Jaguar F-Type preto com película premium" style="object-position:50% 40%" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="tag">PELÍCULA · KIT CONFORT PLUS</span>
+          <h3>Películas de alta performance</h3>
+          <p>Aplicação premium para controlar o calor, ganhar privacidade e combinar com o estilo do carro. A tonalidade é escolhida a partir da sua prioridade.</p>
+          <ul class="ticks"><li>Conforto térmico na cabine</li><li>Privacidade sob medida</li><li>Acabamento de borda a borda</li></ul>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/p911-blue.jpg" alt="Porsche 911 Carrera S azul no estúdio da TH" style="object-position:50% 45%" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="tag">SEGURANÇA</span>
+          <h3>Película antivandalismo</h3>
+          <p>Uma camada de segurança nos vidros que dificulta a quebra e ajuda a reter os fragmentos, protegendo quem está dentro e o que fica no carro.</p>
+          <ul class="ticks"><li>Mais resistência a impactos</li><li>Retenção de estilhaços</li><li>Discreta no visual do carro</li></ul>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/creta-led.jpg" alt="Interior de Hyundai Creta com iluminação ambiente roxa" style="object-position:50% 55%" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="tag">INTERIOR · CONTROLE PELO APP</span>
+          <h3>Iluminação ambiente LED Premium</h3>
+          <p>Sistema integrado ao acabamento do interior e controlado pelo aplicativo: escolha a cor, ajuste a intensidade e crie a atmosfera de cada momento.</p>
+          <ul class="ticks"><li>Integração ao painel e às portas</li><li>Cores e intensidade pelo app</li><li>Instalação planejada área por área</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEOS -->
+<section class="band" id="videos">
+  <div class="rail">
+    <div class="head-row reveal">
+      <div class="stack" style="max-width:720px">
+        <span class="eyebrow">TH em vídeo</span>
+        <h2 class="h2">Veja o trabalho <span class="serif gold-text">de perto.</span></h2>
+      </div>
+      <p class="lead">A história, os bastidores e os projetos entregues, contados pelo próprio estúdio.</p>
+    </div>
+    <div class="videos">
+      <div class="player" id="player" aria-live="polite"></div>
+      <ul class="vlist" id="vlist" aria-label="Escolher vídeo"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="band alt" id="processo">
+  <div class="rail">
+    <div class="process-top">
+      <div class="stack reveal">
+        <span class="eyebrow">Como fazemos</span>
+        <h2 class="h2">Critério em <span class="serif gold-text">cada escolha.</span></h2>
+        <p class="lead">Carros de alto padrão exigem mais do que uma aplicação. Da análise do veículo à revisão final, cada etapa é pensada para preservar a identidade do carro e melhorar a experiência de quem dirige.</p>
+      </div>
+      <figure class="process-img zoom-in parallax" style="margin:0"><img src="img/led-process.jpg" alt="Processo de aplicação de LED no painel de um Hyundai Creta" loading="lazy"></figure>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><h3>Análise</h3><p>Entendemos o carro e a sua prioridade (conforto, privacidade ou visibilidade) antes de qualquer indicação.</p></li>
+      <li class="reveal"><h3>Seleção do material</h3><p>Tonalidade, acabamento, durabilidade e conforto térmico entram na conta para chegar à opção certa.</p></li>
+      <li class="reveal"><h3>Preparação e aplicação</h3><p>Cada área é preparada e planejada, no vidro ou no interior, para uma instalação limpa e precisa.</p></li>
+      <li class="reveal"><h3>Revisão final</h3><p>Conferência detalhe a detalhe antes da entrega, para o carro sair do estúdio do jeito que você imaginou.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- LED -->
+<section class="band" id="led">
+  <div class="rail led">
+    <div class="stack reveal">
+      <span class="eyebrow">LED Premium</span>
+      <h2 class="h2">O interior muda. <span class="serif gold-text">A experiência também.</span></h2>
+      <p class="lead">Teste aqui: escolha uma cor e ajuste a intensidade, como no aplicativo do sistema instalado pela TH.</p>
+      <fieldset class="swatches" id="swatches"><legend class="sr">Cor da iluminação</legend></fieldset>
+      <label class="range" for="ledGlow"><span><span>Intensidade</span><output id="glowOut" for="ledGlow">80%</output></span>
+        <input type="range" id="ledGlow" min="20" max="100" step="5" value="80"></label>
+      <p style="font-size:12px;color:var(--fg-3)">Simulação sobre fotos reais. As cores disponíveis dependem do sistema instalado.</p>
+    </div>
+    <div class="led-shots zoom-in" id="ledShots">
+      <figure><img src="img/creta-led.jpg" alt="Iluminação ambiente nas portas e no painel de um Hyundai Creta" loading="lazy"></figure>
+      <figure><img src="img/nivus-led.jpg" alt="LED Premium no painel de um VW Nivus" style="object-position:50% 60%" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="band alt" id="projetos">
+  <div class="rail">
+    <div class="head-row reveal">
+      <div class="stack">
+        <span class="eyebrow">Projetos entregues</span>
+        <h2 class="h2">Na garagem <span class="serif gold-text">da TH.</span></h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar projetos">
+        <button class="chip" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" data-filter="pelicula" aria-pressed="false">Películas</button>
+        <button class="chip" type="button" data-filter="led" aria-pressed="false">Iluminação LED</button>
+      </div>
+    </div>
+    <ul class="gallery" id="gallery"></ul>
+    <div class="center"><a class="btn btn-ghost" href="https://www.instagram.com/thprotecaoautomotiva/"><svg width="18" height="18" aria-hidden="true"><use href="#icIg"/></svg>Ver todos os projetos no Instagram</a></div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="band" style="padding-block:clamp(64px,7vw,100px)">
+  <div class="rail">
+    <div class="proof reveal">
+      <div>
+        <div class="stars" aria-label="Avaliações no Google">
+          <svg width="22" height="22" aria-hidden="true"><use href="#icStar"/></svg><svg width="22" height="22" aria-hidden="true"><use href="#icStar"/></svg><svg width="22" height="22" aria-hidden="true"><use href="#icStar"/></svg><svg width="22" height="22" aria-hidden="true"><use href="#icStar"/></svg><svg width="22" height="22" aria-hidden="true"><use href="#icStar"/></svg>
+        </div>
+        <strong>Mais de 150 avaliações no Google</strong>
+        <p class="muted" style="margin-top:6px">Quem já passou pela TH conta como foi.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://www.google.com/search?q=TH+Prote%C3%A7%C3%A3o+Automotiva+Ermelino+Matarazzo">Ler as avaliações</a>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="band alt" id="duvidas">
+  <div class="rail faq">
+    <div class="stack reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="h2">Antes de <span class="serif gold-text">agendar.</span></h2>
+      <p class="lead" style="font-size:15px">Não encontrou o que procurava? Fale direto com a TH pelo WhatsApp ou pelo Direct.</p>
+    </div>
+    <div class="reveal">
+      <details open><summary>Como faço um orçamento?</summary><p>Envie o modelo e o ano do seu carro pelo WhatsApp ou pelo Direct do Instagram. Com essas informações, a TH indica a película ou o sistema mais adequado e passa os valores.</p></details>
+      <details><summary>Qual película é a certa para o meu carro?</summary><p>Depende do que você mais valoriza: conforto térmico, privacidade ou visibilidade. A escolha começa por essa prioridade e considera também tonalidade, acabamento e durabilidade, sempre dentro do que a legislação permite.</p></details>
+      <details><summary>O que é o Kit Confort PLUS?</summary><p>É a linha de película premium que a TH aplica nos projetos de alto padrão, como o Mercedes-AMG G63, o Porsche 911 Carrera S e o Jaguar F-Type. Peça os detalhes técnicos no atendimento.</p></details>
+      <details><summary>Como funciona a iluminação ambiente em LED?</summary><p>O sistema é integrado ao acabamento do interior (painel, portas e console) e controlado pelo aplicativo, onde você escolhe a cor e ajusta a intensidade. Antes de instalar, a TH avalia o interior e planeja onde cada trecho de LED vai passar.</p></details>
+      <details><summary>Onde fica a TH?</summary><p>Em Ermelino Matarazzo, na Zona Leste de São Paulo. Combine o horário pelo WhatsApp antes de ir.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="final" id="contato">
+  <img src="img/jaguar.jpg" alt="" aria-hidden="true" loading="lazy">
+  <div class="rail reveal">
+    <svg width="72" height="72" aria-hidden="true"><use href="#thMark"/></svg>
+    <h2>Tem um carro que merece <span class="serif gold-text">um projeto à altura?</span></h2>
+    <p class="lead" style="text-align:center">Envie o modelo e o ano do seu carro. A TH indica a solução mais adequada para o seu projeto.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-gold" href="https://wa.me/message/52O4XRXVXSV6I1"><svg width="20" height="20" aria-hidden="true"><use href="#icWa"/></svg>Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/thprotecaoautomotiva/"><svg width="18" height="18" aria-hidden="true"><use href="#icIg"/></svg>Chamar no Direct</a>
+    </div>
+    <div class="contact-cards">
+      <a class="ccard ccard-link" href="https://wa.me/message/52O4XRXVXSV6I1"><span class="clogo" style="background:#25D366;color:#fff"><svg width="26" height="26" aria-hidden="true"><use href="#icWa"/></svg></span><span class="ctext"><small>WHATSAPP</small><b>Iniciar conversa</b></span></a>
+      <a class="ccard ccard-link" href="https://www.instagram.com/thprotecaoautomotiva/"><span class="clogo" style="background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF);color:#fff"><svg width="24" height="24" aria-hidden="true"><use href="#icIg"/></svg></span><span class="ctext"><small>INSTAGRAM</small><b>Seguir a TH</b><span>@thprotecaoautomotiva</span></span></a>
+      <div class="ccard"><span class="clogo" style="background:rgba(226,194,122,.12);color:var(--gold);border:1px solid var(--line-gold)"><svg width="22" height="22" aria-hidden="true"><use href="#icPin"/></svg></span><span class="ctext"><small>ENDEREÇO</small><b>Ermelino Matarazzo, Zona Leste, SP</b><span>[ENDEREÇO COMPLETO]</span></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="rail">
+    <span style="font-family:var(--f-label);letter-spacing:.18em;font-size:11px;color:#CFCFD4">TH · PROTEÇÃO AUTOMOTIVA</span>
+    <span>Elevando o padrão desde 2014.</span>
+    <a href="https://www.instagram.com/thprotecaoautomotiva/" style="text-decoration:none">@thprotecaoautomotiva</a>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/message/52O4XRXVXSV6I1" aria-label="Conversar com a TH no WhatsApp"><svg width="26" height="26" aria-hidden="true"><use href="#icWa"/></svg></a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto do projeto" hidden>
+  <button class="lb-close" id="lbClose" type="button" aria-label="Fechar foto"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <figure><img id="lbImg" src="img/g63.jpg" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<script>
+(function(){
+  /* ===== CONFIGURAÇÃO DOS VÍDEOS =====
+     Para tocar um vídeo direto no site, coloque o arquivo MP4 na pasta "videos/"
+     e preencha o campo mp4 (ex.: mp4: "videos/16-anos.mp4").
+     Sem MP4, o site usa o player do Instagram quando estiver hospedado no seu domínio. */
+  var VIDEOS = [
+    { id:"DdSEdn9MH1C", kicker:"NOSSA HISTÓRIA", title:"16 anos de profissão, 12 anos de TH", text:"Thiago conta como a TH foi construída, projeto por projeto, e o início de uma nova fase.", date:"Set 2026", poster:"img/thiago.jpg", mp4:"" },
+    { id:"Dd7S3wMPxHK", kicker:"FILME DA MARCA", title:"Desde 2014", text:"Técnica, precisão e atenção a cada detalhe: o filme que abre a nova fase da TH.", date:"Set 2026", poster:"img/porsche-white.jpg", mp4:"" },
+    { id:"DdhwU7pgVC0", kicker:"BASTIDORES", title:"Como fazemos o projeto de um esportivo", text:"Da análise do veículo à seleção do material e à revisão final.", date:"Set 2026", poster:"img/p911-blue.jpg", mp4:"" },
+    { id:"DUBceewgLG0", kicker:"PROJETO", title:"Mercedes-AMG G63", text:"Aplicação de película premium com o Kit Confort PLUS.", date:"Jan 2026", poster:"img/g63.jpg", mp4:"" },
+    { id:"DRmqNq-AMSt", kicker:"PROJETO", title:"Jaguar F-Type", text:"Kit Confort PLUS em um dos esportivos britânicos mais marcantes.", date:"Nov 2025", poster:"img/jaguar.jpg", mp4:"" },
+    { id:"DdxDWXUNy_2", kicker:"LED PREMIUM", title:"Instalação da iluminação ambiente", text:"Preparação, montagem e o resultado da iluminação no interior.", date:"Set 2026", poster:"img/nivus-led.jpg", mp4:"" }
+  ];
+  /* Dentro da pré-visualização do Claude não é possível incorporar o Instagram; no site hospedado, sim. */
+  var CAN_EMBED = !window.claude;
+
+  var player = document.getElementById("player");
+  var vlist = document.getElementById("vlist");
+  var current = 0;
+
+  function reelUrl(v){ return "https://www.instagram.com/reel/" + v.id + "/"; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+  function renderPoster(){
+    var v = VIDEOS[current];
+    var canPlayHere = !!v.mp4 || CAN_EMBED;
+    player.innerHTML =
+      '<img class="bg" src="'+v.poster+'" alt="">' +
+      '<img class="fg" src="'+v.poster+'" alt="'+esc(v.title)+'">' +
+      '<div class="shade"></div>' +
+      (canPlayHere
+        ? '<button class="play" type="button" id="playBtn" aria-label="Assistir: '+esc(v.title)+'"><svg width="30" height="30"><use href="#icPlay"/></svg></button>'
+        : '<a class="play" href="'+reelUrl(v)+'" aria-label="Assistir no Instagram: '+esc(v.title)+'"><svg width="30" height="30"><use href="#icPlay"/></svg></a>') +
+      '<div class="meta"><span class="eyebrow" style="font-size:10px">'+esc(v.kicker)+'</span><h3>'+esc(v.title)+'</h3><p>'+esc(v.text)+'</p></div>';
+    var b = document.getElementById("playBtn");
+    if (b) b.addEventListener("click", playCurrent);
+  }
+
+  function playCurrent(){
+    var v = VIDEOS[current];
+    var ext = '<a class="ext" href="'+reelUrl(v)+'"><svg width="14" height="14"><use href="#icExt"/></svg>Abrir no Instagram</a>';
+    if (v.mp4){
+      player.innerHTML = '<video src="'+v.mp4+'" poster="'+v.poster+'" controls autoplay playsinline></video>' + ext;
+    } else {
+      player.innerHTML = '<iframe src="https://www.instagram.com/reel/'+v.id+'/embed/" title="'+esc(v.title)+' (Instagram)" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>' + ext;
+    }
+  }
+
+  function renderList(){
+    vlist.innerHTML = VIDEOS.map(function(v,i){
+      return '<li><button class="vitem" type="button" data-i="'+i+'" aria-pressed="'+(i===current)+'">' +
+        '<span class="vthumb"><img src="'+v.poster+'" alt="" loading="lazy"></span>' +
+        '<span class="vtext"><small>'+esc(v.kicker)+'</small><b>'+esc(v.title)+'</b><span>'+esc(v.date)+'</span></span></button></li>';
+    }).join("");
+  }
+  vlist.addEventListener("click", function(e){
+    var b = e.target.closest(".vitem"); if(!b) return;
+    current = +b.getAttribute("data-i");
+    renderList(); renderPoster();
+    if (window.matchMedia("(max-width:900px)").matches) player.scrollIntoView({behavior:"smooth", block:"center"});
+  });
+  renderList(); renderPoster();
+
+  /* ===== PROJETOS ===== */
+  var PROJECTS = [
+    { name:"Mercedes-AMG G63", tag:"PELÍCULA", cat:"pelicula", service:"Película premium · Kit Confort PLUS", date:"Jan 2026", img:"img/g63.jpg", alt:"Mercedes-AMG G63 cinza fosco" },
+    { name:"Porsche 911 Carrera S", tag:"PELÍCULA", cat:"pelicula", service:"Película premium · Kit Confort PLUS", date:"Fev 2026", img:"img/p911-shark.jpg", alt:"Porsche 911 Carrera S azul-claro" },
+    { name:"Porsche 911 Carrera S", tag:"PELÍCULA", cat:"pelicula", service:"Película premium · Kit Confort PLUS", date:"Dez 2025", img:"img/p911-blue.jpg", alt:"Porsche 911 Carrera S azul" },
+    { name:"Jaguar F-Type", tag:"PELÍCULA", cat:"pelicula", service:"Kit Confort PLUS", date:"Nov 2025", img:"img/jaguar.jpg", alt:"Jaguar F-Type preto" },
+    { name:"Hyundai Creta", tag:"LED", cat:"led", service:"Iluminação ambiente LED Premium", date:"Ago 2026", img:"img/creta-led.jpg", alt:"Interior de Hyundai Creta com LED roxo" },
+    { name:"VW Nivus", tag:"LED", cat:"led", service:"LED Premium no painel", date:"Set 2026", img:"img/nivus-led.jpg", alt:"Painel de VW Nivus com LED Premium" }
+  ];
+  var gallery = document.getElementById("gallery");
+  gallery.innerHTML = PROJECTS.map(function(p,i){
+    return '<li data-cat="'+p.cat+'"><button class="proj" type="button" data-i="'+i+'" aria-label="Ampliar foto: '+esc(p.name)+'">' +
+      '<img src="'+p.img+'" alt="'+esc(p.alt)+'" loading="lazy"><span class="shade"></span><span class="tag">'+p.tag+'</span>' +
+      '<span class="info"><small>'+p.date+'</small><b>'+esc(p.name)+'</b><span>'+esc(p.service)+'</span><i></i></span></button></li>';
+  }).join("");
+  document.querySelectorAll("[data-filter]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var f = btn.getAttribute("data-filter");
+      document.querySelectorAll("[data-filter]").forEach(function(b){ b.setAttribute("aria-pressed", String(b===btn)); });
+      gallery.querySelectorAll("li").forEach(function(li){ li.hidden = !(f==="todos" || li.getAttribute("data-cat")===f); });
+    });
+  });
+
+  /* lightbox */
+  var lb = document.getElementById("lightbox"), lbImg = document.getElementById("lbImg"), lbCap = document.getElementById("lbCap"), lastFocus = null;
+  gallery.addEventListener("click", function(e){
+    var b = e.target.closest(".proj"); if(!b) return;
+    var p = PROJECTS[+b.getAttribute("data-i")];
+    lastFocus = b; lbImg.src = p.img; lbImg.alt = p.alt;
+    lbCap.innerHTML = "<b>"+esc(p.name)+"</b>"+esc(p.service)+" · "+p.date;
+    lb.hidden = false; document.getElementById("lbClose").focus();
+  });
+  function closeLb(){ lb.hidden = true; if(lastFocus) lastFocus.focus(); }
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  lb.addEventListener("click", function(e){ if(e.target===lb) closeLb(); });
+  lb.addEventListener("keydown", function(e){ if(e.key==="Escape") closeLb(); });
+
+  /* ===== LED ===== */
+  var LEDS = [
+    { name:"Roxo", hue:0, c:"#9B5CFF" }, { name:"Azul", hue:-50, c:"#4F8DFF" }, { name:"Ciano", hue:-88, c:"#2FD4E0" },
+    { name:"Vermelho", hue:88, c:"#FF3B4A" }, { name:"Âmbar", hue:128, c:"#FFB020" }, { name:"Verde", hue:-150, c:"#3BE07A" }
+  ];
+  var sw = document.getElementById("swatches"), glow = document.getElementById("ledGlow"), glowOut = document.getElementById("glowOut"), shots = document.getElementById("ledShots"), led = 0;
+  LEDS.forEach(function(l,i){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "swatch"; b.style.setProperty("--c", l.c);
+    b.setAttribute("aria-pressed", String(i===0)); b.innerHTML = "<i></i>"+l.name;
+    b.addEventListener("click", function(){ led = i; sw.querySelectorAll(".swatch").forEach(function(x,j){ x.setAttribute("aria-pressed", String(j===i)); }); applyLed(); });
+    sw.appendChild(b);
+  });
+  function applyLed(){
+    var g = +glow.value, l = LEDS[led];
+    glowOut.textContent = g + "%";
+    shots.style.setProperty("--led-filter", "hue-rotate("+l.hue+"deg) brightness("+(0.55+g/100*0.75).toFixed(2)+") saturate("+(0.7+g/100*0.7).toFixed(2)+")");
+    shots.style.setProperty("--glow-shadow", "0 30px "+Math.round(40+g*0.6)+"px -20px "+l.c);
+  }
+  glow.addEventListener("input", applyLed); applyLed();
+
+  /* ===== colmeia do hero ===== */
+  var honey = document.getElementById("honey"), ns = "http://www.w3.org/2000/svg";
+  for (var r=0;r<6;r++){ for (var c=0;c<6;c++){
+    var u = document.createElementNS(ns,"use"); u.setAttribute("href","#hx");
+    u.setAttribute("x", 828 + c*104 + (r%2?52:0)); u.setAttribute("y", 50 + r*90); honey.appendChild(u);
+  }}
+
+  /* ===== menu mobile ===== */
+  var mb = document.getElementById("menuBtn"), mm = document.getElementById("mobileMenu");
+  mb.addEventListener("click", function(){ var open = mm.hidden; mm.hidden = !open; mb.setAttribute("aria-expanded", String(open)); mb.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu"); });
+  mm.addEventListener("click", function(e){ if(e.target.tagName==="A"){ mm.hidden = true; mb.setAttribute("aria-expanded","false"); } });
+})();
+</script>
+
+</body>
+</html>
